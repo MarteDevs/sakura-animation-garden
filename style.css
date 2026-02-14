@@ -34,23 +34,14 @@ body, html {
     animation: pulse 3s infinite ease-in-out;
     width: 100%;
     text-align: center;
+    padding: 0 20px; /* Añadido padding para pantallas pequeñas */
+    box-sizing: border-box;
 }
 
 @keyframes pulse {
     0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
     50% { opacity: 1; transform: translateX(-50%) scale(1.05); }
 }
-
-/* Opcional: Imagen de fondo personalizada 
-   Descomenta las líneas de abajo para usar una imagen en assets/images/background.jpg
-*/
-/*
-#background-layer {
-    background: url('assets/images/background.jpg') no-repeat center center fixed !important;
-    background-size: cover !important;
-    animation: none !important;
-}
-*/
 
 @keyframes sunsetAnimation {
     0% { background-position: 0% 0%; }
@@ -109,6 +100,7 @@ body, html {
     pointer-events: auto;
     transition: transform 0.5s ease, filter 0.5s ease;
     filter: drop-shadow(0 0 5px rgba(255, 192, 203, 0.5));
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
 .sakura-flower:hover {
@@ -170,6 +162,8 @@ body, html {
     display: flex;
     align-items: center;
     gap: 8px;
+    z-index: 100; /* Ensure button is always clickable */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .music-btn:hover {
@@ -191,12 +185,66 @@ body, html {
 @keyframes fadeInUpBlur {
     0% {
         opacity: 0;
-        transform: translate3d(0, 30px, 0);
+        transform: translate(-50%, calc(-50% + 30px));
         filter: blur(10px);
     }
     100% {
         opacity: 1;
-        transform: translate3d(0, 0, 0);
+        transform: translate(-50%, -50%);
         filter: blur(0);
+    }
+}
+
+/* --- Media Queries para Responsividad --- */
+
+/* Tablets y móviles grandes */
+@media (max-width: 768px) {
+    #instructions {
+        font-size: 1.2rem;
+        top: 15%;
+    }
+
+    .sakura-flower {
+        width: 50px;
+        height: 50px;
+    }
+
+    #quote-text {
+        font-size: 1.4rem;
+    }
+
+    #quote-source {
+        font-size: 1rem;
+    }
+
+    .music-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    #instructions {
+        font-size: 1rem;
+        top: 12%;
+    }
+
+    .sakura-flower {
+        width: 45px;
+        height: 45px;
+    }
+
+    #quote-text {
+        font-size: 1.2rem;
+    }
+    
+    #quote-overlay {
+        width: 90%;
+    }
+
+    .music-btn {
+        bottom: 15px;
+        right: 15px;
     }
 }

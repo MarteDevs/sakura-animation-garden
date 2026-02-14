@@ -451,13 +451,15 @@ function createClouds() {
         const cloud = document.createElement('div');
         cloud.classList.add('cloud');
         
-        const width = Math.random() * 300 + 200;
-        const height = width * 0.4;
+        // Usar unidades relativas (vw) para responsividad
+        // Ancho entre 30vw y 60vw
+        const widthVw = Math.random() * 30 + 30;
+        const heightVw = widthVw * 0.4;
         
-        cloud.style.width = `${width}px`;
-        cloud.style.height = `${height}px`;
+        cloud.style.width = `${widthVw}vw`;
+        cloud.style.height = `${heightVw}vw`;
         cloud.style.top = `${Math.random() * 60}%`;
-        cloud.style.left = `-400px`; // Inicio fuera de pantalla
+        cloud.style.left = `-${widthVw}vw`; // Iniciar fuera de pantalla basado en su ancho
         
         const duration = Math.random() * 40 + 60; // 60-100s
         cloud.style.animationDuration = `${duration}s`;
