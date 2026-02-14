@@ -19,6 +19,28 @@ body, html {
     animation: sunsetAnimation 20s ease infinite alternate;
 }
 
+/* Estilos para el texto de instrucción */
+#instructions {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(255, 183, 197, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    pointer-events: none;
+    animation: pulse 3s infinite ease-in-out;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+    50% { opacity: 1; transform: translateX(-50%) scale(1.05); }
+}
+
 /* Opcional: Imagen de fondo personalizada 
    Descomenta las líneas de abajo para usar una imagen en assets/images/background.jpg
 */
