@@ -11,6 +11,9 @@
 </head>
 <body>
     <div id="background-layer"></div>
+    <div id="overlay-layer"></div>
+    <div id="clouds-container"></div>
+    
     <canvas id="petal-canvas"></canvas>
     
     <div id="garden-container">
@@ -27,8 +30,8 @@
     </button>
     
     <!-- Audio oculto (puedes reemplazar 'music.mp3' con un archivo real) -->
-    <audio id="bg-music" loop>
-        <source src="music.mp3" type="audio/mp3">
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/music/music.mp3" type="audio/mp3">
         Tu navegador no soporta el elemento de audio.
     </audio>
 

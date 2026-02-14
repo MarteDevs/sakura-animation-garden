@@ -1,10 +1,104 @@
 const quotes = [
-    { text: "No importa en qué parte del mundo estés, te buscaré.", source: "Your Name (Kimi no Na wa)" },
-    { text: "Quiero estar contigo. De ahora en adelante, quiero pasar todos y cada uno de mis días contigo hasta que muera.", source: "Clannad" },
-    { text: "Incluso si el mundo entero se vuelve contra ti, yo seguiré a tu lado.", source: "Tenki no Ko (Weathering With You)" },
-    { text: "Si pudiera conocerte mil veces, te elegiría mil veces más.", source: "Romance Anime Quote" },
-    { text: "Te amo más que a cualquier cielo azul.", source: "Tenki no Ko" },
-    { text: "Me enamoré de ti. No porque no tuviera a nadie más, sino porque no quería a nadie más.", source: "Shigatsu wa Kimi no Uso" }
+    { "frase": "Te amo más de lo que las palabras pueden expresar.", "anime": "Sword Art Online" },
+    { "frase": "Mientras estés conmigo, no necesito nada más.", "anime": "Naruto" },
+    { "frase": "Eres la razón por la que sonrío cada día.", "anime": "Toradora!" },
+    { "frase": "No importa dónde estés, siempre estaré contigo.", "anime": "Your Name" },
+    { "frase": "Mi corazón siempre te encontrará.", "anime": "Inuyasha" },
+    { "frase": "Quiero quedarme a tu lado para siempre.", "anime": "Clannad" },
+    { "frase": "Eres mi luz en la oscuridad.", "anime": "Attack on Titan" },
+    { "frase": "Si estamos juntos, puedo superar cualquier cosa.", "anime": "Fairy Tail" },
+    { "frase": "Tu sonrisa es mi tesoro más preciado.", "anime": "Kimi ni Todoke" },
+    { "frase": "No necesito un milagro, te tengo a ti.", "anime": "Fullmetal Alchemist: Brotherhood" },
+    { "frase": "Contigo, todo es posible.", "anime": "Violet Evergarden" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Your Lie in April" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Horimiya" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Your Lie in April" },
+    { "frase": "Mi corazón late por ti.", "anime": "Fruits Basket" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "Fruits Basket" },
+    { "frase": "Eres mi hogar.", "anime": "ReLIFE" },
+    { "frase": "Gracias por existir.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Eres mi destino.", "anime": "Plastic Memories" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Horimiya" },
+    { "frase": "Eres mi destino.", "anime": "Your Lie in April" },
+    { "frase": "Gracias por existir.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Plastic Memories" },
+    { "frase": "Gracias por existir.", "anime": "Your Lie in April" },
+    { "frase": "Mi corazón late por ti.", "anime": "Your Lie in April" },
+    { "frase": "Eres mi destino.", "anime": "Ao Haru Ride" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Plastic Memories" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Your Lie in April" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "Your Lie in April" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Ao Haru Ride" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "Horimiya" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "Your Lie in April" },
+    { "frase": "Contigo, todo es posible.", "anime": "Darling in the Franxx" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Your Lie in April" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Eres mi persona favorita en el mundo.", "anime": "ReLIFE" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Plastic Memories" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Your Lie in April" },
+    { "frase": "Contigo, todo es posible.", "anime": "Angel Beats!" },
+    { "frase": "Eres mi persona favorita en el mundo.", "anime": "Your Lie in April" },
+    { "frase": "Contigo, todo es posible.", "anime": "Horimiya" },
+    { "frase": "Eres mi hogar.", "anime": "Darling in the Franxx" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Ao Haru Ride" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Ao Haru Ride" },
+    { "frase": "Gracias por existir.", "anime": "Your Lie in April" },
+    { "frase": "Mi corazón late por ti.", "anime": "ReLIFE" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Violet Evergarden" },
+    { "frase": "Mi corazón late por ti.", "anime": "ReLIFE" },
+    { "frase": "Gracias por existir.", "anime": "Plastic Memories" },
+    { "frase": "Eres mi persona favorita en el mundo.", "anime": "ReLIFE" },
+    { "frase": "Eres mi hogar.", "anime": "Ao Haru Ride" },
+    { "frase": "Gracias por existir.", "anime": "ReLIFE" },
+    { "frase": "Contigo, todo es posible.", "anime": "Angel Beats!" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "ReLIFE" },
+    { "frase": "Contigo, todo es posible.", "anime": "Your Lie in April" },
+    { "frase": "Eres mi persona favorita en el mundo.", "anime": "ReLIFE" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Your Lie in April" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Darling in the Franxx" },
+    { "frase": "Eres mi persona favorita en el mundo.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Gracias por existir.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Your Lie in April" },
+    { "frase": "Contigo, todo es posible.", "anime": "Your Lie in April" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "Horimiya" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Horimiya" },
+    { "frase": "Eres mi destino.", "anime": "Violet Evergarden" },
+    { "frase": "Gracias por existir.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "Darling in the Franxx" },
+    { "frase": "Mi corazón late por ti.", "anime": "Your Lie in April" },
+    { "frase": "Contigo, todo es posible.", "anime": "Darling in the Franxx" },
+    { "frase": "Eres mi hogar.", "anime": "Angel Beats!" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Angel Beats!" },
+    { "frase": "Prometo protegerte siempre.", "anime": "ReLIFE" },
+    { "frase": "Eres mi persona favorita en el mundo.", "anime": "Ao Haru Ride" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Violet Evergarden" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "ReLIFE" },
+    { "frase": "Gracias por existir.", "anime": "Angel Beats!" },
+    { "frase": "Contigo, todo es posible.", "anime": "ReLIFE" },
+    { "frase": "Contigo, todo es posible.", "anime": "Violet Evergarden" },
+    { "frase": "Gracias por existir.", "anime": "Your Lie in April" },
+    { "frase": "Gracias por existir.", "anime": "Your Lie in April" },
+    { "frase": "Mi corazón late por ti.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Your Lie in April" },
+    { "frase": "Contigo, todo es posible.", "anime": "ReLIFE" },
+    { "frase": "Prometo protegerte siempre.", "anime": "Ao Haru Ride" },
+    { "frase": "Eres mi destino.", "anime": "Ao Haru Ride" },
+    { "frase": "Siempre elijo estar contigo.", "anime": "Violet Evergarden" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Ao Haru Ride" },
+    { "frase": "Eres mi hogar.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Ao Haru Ride" },
+    { "frase": "Mi corazón late por ti.", "anime": "Darling in the Franxx" },
+    { "frase": "Contigo, todo es posible.", "anime": "ReLIFE" },
+    { "frase": "Mi corazón late por ti.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Mi mundo cambió cuando te conocí.", "anime": "Violet Evergarden" },
+    { "frase": "Mi corazón late por ti.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Plastic Memories" },
+    { "frase": "Prometo protegerte siempre.", "anime": "The Pet Girl of Sakurasou" },
+    { "frase": "Mi corazón late por ti.", "anime": "Ao Haru Ride" },
+    { "frase": "Quiero caminar a tu lado toda la vida.", "anime": "Violet Evergarden" },
+    { "frase": "Eres mi hogar.", "anime": "Angel Beats!" }
 ];
 
 const container = document.getElementById('garden-container');
@@ -15,8 +109,10 @@ const musicBtn = document.getElementById('music-btn');
 const audio = document.getElementById('bg-music');
 const canvas = document.getElementById('petal-canvas');
 const ctx = canvas.getContext('2d');
+const cloudsContainer = document.getElementById('clouds-container');
 
 let particles = [];
+let sparkles = [];
 let animationId;
 
 // Ajustar canvas
@@ -28,13 +124,31 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
+// --- Generación de Nubes ---
+function createClouds() {
+    const cloudCount = 4;
+    for (let i = 0; i < cloudCount; i++) {
+        const cloud = document.createElement('div');
+        cloud.classList.add('cloud');
+        
+        const width = Math.random() * 300 + 200;
+        const height = width * 0.4;
+        
+        cloud.style.width = `${width}px`;
+        cloud.style.height = `${height}px`;
+        cloud.style.top = `${Math.random() * 60}%`;
+        cloud.style.left = `-400px`; // Inicio fuera de pantalla
+        
+        const duration = Math.random() * 40 + 60; // 60-100s
+        cloud.style.animationDuration = `${duration}s`;
+        cloud.style.animationDelay = `${Math.random() * -duration}s`; // Iniciar en posición random
+        
+        cloudsContainer.appendChild(cloud);
+    }
+}
+createClouds();
+
 // SVG de Flor de Sakura
-const sakuraSvgContent = `
-<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-    <path d="M256,0C167.6,0,105.7,46.9,86.4,117c-13.6,49.4,3.1,101.5,41.9,139c-38.8,37.5-55.5,89.6-41.9,139C105.7,465.1,167.6,512,256,512c88.4,0,150.3-46.9,169.6-117c13.6-49.4-3.1-101.5-41.9-139c38.8-37.5,55.5-89.6,41.9-139C406.3,46.9,344.4,0,256,0z M256,224c-17.7,0-32-14.3-32-32s14.3-32,32-32s32,14.3,32,32S273.7,224,256,224z" fill="currentColor"/>
-</svg>
-`; 
-// Usando un path simplificado o iconografía genérica de flor para demo
 const simpleFlowerSvg = `
 <svg viewBox="0 0 100 100" style="fill:#ffb7c5; overflow:visible;">
   <path d="M50 50 Q70 20 90 50 Q70 80 50 50 Q30 80 10 50 Q30 20 50 50 Z" transform="rotate(0 50 50)" />
@@ -52,14 +166,11 @@ function createFlowers(count) {
         flower.classList.add('sakura-flower');
         flower.innerHTML = simpleFlowerSvg;
         
-        // Posición aleatoria
-        const x = Math.random() * 80 + 10; // 10% a 90%
-        const y = Math.random() * 80 + 10; // 10% a 90%
+        const x = Math.random() * 80 + 10;
+        const y = Math.random() * 80 + 10;
         
         flower.style.left = `${x}%`;
         flower.style.top = `${y}%`;
-        
-        // Retraso de animación aleatorio
         flower.style.animationDelay = `${Math.random() * 2}s`;
         
         flower.addEventListener('click', (e) => handleFlowerClick(e, flower));
@@ -69,17 +180,12 @@ function createFlowers(count) {
 }
 
 function handleFlowerClick(e, element) {
-    // 1. Lluvia de pétalos
     createExplosion(e.clientX, e.clientY);
-    
-    // 2. Mostrar frase
     showRandomQuote();
     
-    // 3. Efecto visual en la flor (opcional: ocultar o animar)
     element.style.transform = "scale(0) rotate(180deg)";
     element.style.opacity = "0";
     setTimeout(() => {
-        // Reaparecer en otro lugar o reiniciar
         const x = Math.random() * 80 + 10;
         const y = Math.random() * 80 + 10;
         element.style.left = `${x}%`;
@@ -93,21 +199,18 @@ function showRandomQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const quote = quotes[randomIndex];
     
-    quoteText.textContent = `"${quote.text}"`;
-    quoteSource.textContent = `- ${quote.source}`;
+    quoteText.textContent = `"${quote.frase}"`;
+    quoteSource.textContent = `- ${quote.anime}`;
     
     quoteOverlay.classList.remove('hidden');
     quoteOverlay.classList.add('visible');
     
-    // Reiniciar animación
     quoteOverlay.classList.remove('fade-in-up');
-    void quoteOverlay.offsetWidth; // trigger reflow
+    void quoteOverlay.offsetWidth;
     quoteOverlay.classList.add('fade-in-up');
-
-    // Ocultar después de unos segundos si se desea, o dejar hasta el próximo click
 }
 
-// --- Sistema de Partículas (Pétalos) ---
+// --- Sistema de Partículas (Pétalos y Destellos) ---
 class Petal {
     constructor(x, y) {
         this.x = x;
@@ -127,7 +230,6 @@ class Petal {
         this.sway += this.swaySpeed;
         this.x += Math.sin(this.sway) * 2;
         this.rotation += this.rotationSpeed;
-        
         if (this.size > 0.2) this.size -= 0.05;
     }
 
@@ -136,7 +238,6 @@ class Petal {
         ctx.translate(this.x, this.y);
         ctx.rotate((this.rotation * Math.PI) / 180);
         ctx.fillStyle = this.color;
-        // Dibujar forma de pétalo simple
         ctx.beginPath();
         ctx.ellipse(0, 0, this.size, this.size / 2, 0, 0, Math.PI * 2);
         ctx.fill();
@@ -144,16 +245,56 @@ class Petal {
     }
 }
 
+class Sparkle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2;
+        this.opacity = Math.random();
+        this.speedY = Math.random() * -0.5 - 0.1; // Flotar hacia arriba suavemente
+        this.fadeSpeed = Math.random() * 0.01 + 0.005;
+    }
+
+    update() {
+        this.y += this.speedY;
+        this.opacity -= this.fadeSpeed;
+        if (this.opacity <= 0) {
+            this.y = canvas.height + 10;
+            this.x = Math.random() * canvas.width;
+            this.opacity = 1;
+        }
+    }
+
+    draw() {
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
 function createExplosion(x, y) {
     for (let i = 0; i < 30; i++) {
         particles.push(new Petal(x, y));
     }
-    if (!animationId) animateParticles();
+}
+
+function initSparkles() {
+    for (let i = 0; i < 50; i++) {
+        sparkles.push(new Sparkle());
+    }
 }
 
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
+    // Animar destellos (siempre activos)
+    for (let i = 0; i < sparkles.length; i++) {
+        sparkles[i].update();
+        sparkles[i].draw();
+    }
+
+    // Animar pétalos (solo cuando existen)
     for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
@@ -164,25 +305,38 @@ function animateParticles() {
         }
     }
     
-    if (particles.length > 0) {
-        animationId = requestAnimationFrame(animateParticles);
-    } else {
-        animationId = null;
-    }
+    requestAnimationFrame(animateParticles);
 }
 
 // --- Música ---
 let isPlaying = false;
+audio.volume = 1.0; // Volumen al 100%
+
 musicBtn.addEventListener('click', () => {
     if (isPlaying) {
         audio.pause();
         musicBtn.innerHTML = "<span>🎵</span> Música";
+        musicBtn.classList.remove('playing');
     } else {
-        audio.play().catch(e => alert("Por favor interactúa con la página primero o agrega un archivo de audio válido."));
-        musicBtn.innerHTML = "<span>⏸️</span> Pausar";
+        const playPromise = audio.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                // Reproducción iniciada con éxito
+                musicBtn.innerHTML = "<span>⏸️</span> Pausar";
+                musicBtn.classList.add('playing');
+            })
+            .catch(error => {
+                console.error("Error al reproducir audio:", error);
+                alert("No se pudo reproducir la música. Asegúrate de que el archivo 'music.mp3' esté en la carpeta 'assets/music/'.");
+                musicBtn.innerHTML = "<span>⚠️</span> Error";
+            });
+        }
     }
     isPlaying = !isPlaying;
 });
 
 // Inicializar
 createFlowers(5);
+initSparkles();
+animateParticles(); // Bucle constante para los destellos
