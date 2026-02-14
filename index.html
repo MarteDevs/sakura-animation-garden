@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardín de Sakura Interactivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background-layer"></div>
+    <canvas id="petal-canvas"></canvas>
+    
+    <div id="garden-container">
+        <!-- Las flores se generarán dinámicamente o estarán aquí estáticas -->
+    </div>
+
+    <div id="quote-overlay" class="hidden">
+        <p id="quote-text"></p>
+        <p id="quote-source"></p>
+    </div>
+
+    <button id="music-btn" class="music-btn">
+        <span>🎵</span> Música
+    </button>
+    
+    <!-- Audio oculto (puedes reemplazar 'music.mp3' con un archivo real) -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
