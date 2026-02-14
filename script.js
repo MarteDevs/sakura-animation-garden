@@ -451,15 +451,24 @@ function createClouds() {
         const cloud = document.createElement('div');
         cloud.classList.add('cloud');
         
-        // Usar unidades relativas (vw) para responsividad
-        // Ancho entre 30vw y 60vw
-        const widthVw = Math.random() * 30 + 30;
-        const heightVw = widthVw * 0.4;
+        // Lógica responsiva para tamaño de nubes
+        let width, height;
+        if (window.innerWidth <= 768) {
+             // Móvil: Usar vw
+             const widthVw = Math.random() * 30 + 30;
+             width = `${widthVw}vw`;
+             height = `${widthVw * 0.4}vw`;
+        } else {
+             // Desktop: Usar px limitados (200px - 400px)
+             const widthPx = Math.random() * 200 + 200;
+             width = `${widthPx}px`;
+             height = `${widthPx * 0.4}px`;
+        }
         
-        cloud.style.width = `${widthVw}vw`;
-        cloud.style.height = `${heightVw}vw`;
+        cloud.style.width = width;
+        cloud.style.height = height;
         cloud.style.top = `${Math.random() * 60}%`;
-        cloud.style.left = `-${widthVw}vw`; // Iniciar fuera de pantalla basado en su ancho
+        cloud.style.left = `-${width}`; // Iniciar fuera de pantalla
         
         const duration = Math.random() * 40 + 60; // 60-100s
         cloud.style.animationDuration = `${duration}s`;

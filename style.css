@@ -126,7 +126,12 @@ body, html {
     transition: opacity 1s ease;
     width: 80%;
     max-width: 800px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra más fuerte */
+    background: rgba(0, 0, 0, 0.2); /* Fondo sutil para contraste */
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(2px); /* Efecto cristal suave */
+    box-sizing: border-box;
 }
 
 #quote-overlay.visible {
